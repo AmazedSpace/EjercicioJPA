@@ -1,10 +1,15 @@
 package com.en.ts.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.en.ts.entities.Cliente;
 import com.en.ts.repositories.ClienteRepositoryImpl;
 
+@Service(value = "ClienteService")
 public class ClienteServiceImpl implements ClienteService {
 
+	@Autowired
 	ClienteRepositoryImpl repo;
 	
 	public ClienteServiceImpl() {

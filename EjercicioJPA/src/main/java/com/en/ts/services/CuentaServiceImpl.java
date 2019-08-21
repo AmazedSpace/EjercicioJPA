@@ -1,12 +1,17 @@
 package com.en.ts.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.en.ts.entities.Banco;
 import com.en.ts.entities.Cliente;
 import com.en.ts.entities.Cuenta;
 import com.en.ts.repositories.CuentaRepositoryImpl;
 
+@Service(value = "CuentaService")
 public class CuentaServiceImpl implements CuentaService {
 	
+	@Autowired
 	CuentaRepositoryImpl repo;
 
 	public CuentaServiceImpl() {

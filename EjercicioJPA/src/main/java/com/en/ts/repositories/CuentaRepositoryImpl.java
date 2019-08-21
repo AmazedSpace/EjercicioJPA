@@ -4,10 +4,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.springframework.stereotype.Repository;
+
 import com.en.ts.entities.Banco;
 import com.en.ts.entities.Cliente;
 import com.en.ts.entities.Cuenta;
 
+@Repository(value = "CuentaRepository")
 public class CuentaRepositoryImpl implements CuentaRepository {
 
 	private EntityManagerFactory emf = null;
